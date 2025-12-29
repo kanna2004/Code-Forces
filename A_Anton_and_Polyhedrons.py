@@ -1,0 +1,21 @@
+import sys
+input = sys.stdin.readline
+
+def solve():
+    faces = {
+            "Tetrahedron": 4,
+            "Cube": 6,
+            "Octahedron": 8,
+            "Dodecahedron": 12,
+            "Icosahedron": 20
+        }
+    
+    n = int(input())
+    total = 0
+    for _ in range(n):
+        total += faces[input().strip()]
+    
+    print(total)
+
+if __name__ == "__main__":
+    solve()
